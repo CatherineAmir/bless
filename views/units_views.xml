@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+        <record id="units_tree_view" model="ir.ui.view">
+            <field name="name">bless.units.tree</field>
+            <field name="model">bless.units</field>
+            <field name="arch" type="xml">
+                <tree string="Units" editable="bottom">
+                    <field name="name" required="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="units_act_window" model="ir.actions.act_window">
+            <field name="name">Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.units</field>
+
+            <field name="view_mode">tree</field>
+
+        </record>
+
+
+        <menuitem name="Units" id="bless_units" parent="bless_configurations" action="units_act_window" sequence="4"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+        <record id="beverage_tree_view" model="ir.ui.view">
+            <field name="name">bless.beverage.tree</field>
+            <field name="model">bless.beverage</field>
+            <field name="arch" type="xml">
+                <tree string="Food and Beverage" editable="bottom">
+                    <field name="name" required="1"/>
+                    <field name="unit_id"/>
+                    <field name="price"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="beverage_act_window" model="ir.actions.act_window">
+            <field name="name">Beverage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.beverage</field>
+
+            <field name="view_mode">tree</field>
+
+        </record>
+
+
+        <menuitem name="Food and Beverage" id="bless_beverage" parent="bless_configurations" action="beverage_act_window" sequence="5"/>
+
+    </data>
+</odoo>

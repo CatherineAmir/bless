@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+        <record id="region_tree_view" model="ir.ui.view">
+            <field name="name">bless.region.tree</field>
+            <field name="model">bless.regions</field>
+            <field name="arch" type="xml">
+                <tree string="Regions" editable="bottom">
+                    <field name="name" required="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="regions_act_window" model="ir.actions.act_window">
+            <field name="name">Regions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.regions</field>
+
+            <field name="view_mode">tree</field>
+
+        </record>
+        <menuitem name="BLESS" id="main_bless_Menu" sequence="0"/>
+        <menuitem name="Configurations" id="bless_configurations" parent="main_bless_Menu" sequence="100"/>
+        <menuitem name="Regions" id="bless_regions" parent="bless_configurations" action="regions_act_window" sequence="1"/>
+
+    </data>
+</odoo>

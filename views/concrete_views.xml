@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="concrete_tree_view" model="ir.ui.view">
+            <field name="name">bless.concrete.tree</field>
+            <field name="model">bless.concrete</field>
+            <field name="arch" type="xml">
+                <tree string="Concrete" editable="bottom">
+                    <field name="name" required="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="concrete_act_window" model="ir.actions.act_window">
+            <field name="name">Concrete</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.concrete</field>
+
+            <field name="view_mode">tree</field>
+
+        </record>
+
+
+        <menuitem name="Concrete" id="bless_concrete" parent="bless_configurations" action="concrete_act_window" sequence="5"/>
+
+    </data>
+</odoo>

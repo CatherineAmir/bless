@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="bless_family_form" model="ir.ui.view">
+            <field name="name">bless.family.form</field>
+            <field name="model">bless.family</field>
+            <field name="arch" type="xml">
+                <form string="family_code">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="family_code"/>
+                            <h1>
+                                <field name="family_code"/>
+                            </h1>
+
+
+                        </div>
+                        <group>
+                            <field name="family_category"/>
+                            <field name="responsible_servant"/>
+
+                        </group>
+                        <group>
+                            <group string="Family Data">
+                                <field name="husband_name"/>
+                                <field name="family_member_count"/>
+                                <field name="boys_member_count"/>
+                                <field name="girls_member_count"/>
+                            </group>
+                            <group string="Family Address">
+                                <field name="district" required="1"/>
+                                <field name="nearby" reqiured="0"/>
+                                <field name="building_number" required="0"/>
+                                <field name="apartment_number" required="0"/>
+                            </group>
+                        </group>
+                        <notebook>
+                        <page string="Members">
+                            <field name="member_ids" >
+                                <tree editable="bottom">
+                                    <field name="family_id" invisible="1"/>
+                                    <field name="name"/>
+                                    <field name="role_in_family"/>
+                                    <field name="egyptian" widget="toggle_button"/>
+                                    <field name="national_id"/>
+                                    <field name="date_birth" attrs="{'readonly':[('egyptian','=',True)]}"/>
+                                    <field name="phone_number"/>
+                                    <field name="email" optional="hide"/>
+
+
+
+
+                                </tree>
+
+                            </field>
+
+                        </page>
+                    </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="bless_family_tree" model="ir.ui.view">
+            <field name="name">bless.family.tree</field>
+            <field name="model">bless.family</field>
+            <field name="arch" type="xml">
+                <tree string="Family">
+                    <field name="family_code"/>
+                    <field name="responsible_servant"/>
+                    <field name="family_category"/>
+                    <field name="husband_name"/>
+                    <field name="family_member_count"/>
+                    <field name="boys_member_count"/>
+                    <field name="girls_member_count"/>
+                    <field name="district"/>
+                    <field name="nearby" optional="hide"/>
+                    <field name="building_number" optional="hide"/>
+                    <field name="apartment_number" optional="hide"/>
+
+                </tree>
+            </field>
+        </record>
+
+<!--        <record id="ModelName_search_view" model="ir.ui.view">-->
+<!--            <field name="name">ProjectName.ModelName.search</field>-->
+<!--            <field name="model">ProjectName.ModelName</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="ModelTitle">-->
+<!--                    <group expand="1" string="Group By">-->
+<!--                        <filter string="Example Field" name="example_field" domain="[]"-->
+<!--                                context="{'group_by':'example_field'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="family_in_service_action" model="ir.actions.act_window">
+            <field name="name">Family In Service</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('family_category','=','inside_service')]</field>
+
+        </record>
+        <record id="family_out_service_action" model="ir.actions.act_window">
+            <field name="name">Family out Service</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('family_category','=','outside_service')]</field>
+
+        </record>
+        <record id="family_hidden_service_action" model="ir.actions.act_window">
+            <field name="name">Hidden Families</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('family_category','=','hidden_family')]</field>
+
+        </record>
+        <record id="family_refugees_service_action" model="ir.actions.act_window">
+            <field name="name">Refugees Families</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.family</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('family_category','=','refugees')]</field>
+
+        </record>
+
+
+        <menuitem name="Family" id="bless_Family" parent="main_bless_Menu" sequence="5"/>
+        <menuitem name="Families In Services" id="family_in_service" parent="bless_Family" action="family_in_service_action" sequence="1"/>
+        <menuitem name="Families Outside Services" id="family_out_service" parent="bless_Family" action="family_out_service_action" sequence="2"/>
+        <menuitem name="Families Hidden" id="family_hidden_service" parent="bless_Family" action="family_hidden_service_action" sequence="3"/>
+        <menuitem name="Families Refugees" id="family_refugees_service" parent="bless_Family" action="family_refugees_service_action" sequence="4"/>
+
+    </data>
+</odoo>

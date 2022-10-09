@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        <record id="Mem_form_view" model="ir.ui.view">-->
+<!--            <field name="name">ProjectName.Mem.form</field>-->
+<!--            <field name="model">ProjectName.Mem</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="ModelTitle">-->
+<!--                    <sheet>-->
+<!--                        <div class="oe_title">-->
+<!--                            <label for="example_title"/>-->
+<!--                            <h1>-->
+<!--                                <field name="example_title" placeholder="Title"/>-->
+<!--                            </h1>-->
+<!--                        </div>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="create_date"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="example_field"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="Members_tree_view" model="ir.ui.view">
+            <field name="name">bless.member.tree</field>
+            <field name="model">bless.member</field>
+            <field name="arch" type="xml">
+                <tree string="Members" create="false" edit="false">
+                    <field name="name"/>
+                    <field name="role_in_family"/>
+                    <field name="egyptian"/>
+                    <field name="national_id"/>
+                    <field name="date_birth"/>
+                    <field name="phone_number"/>
+                    <field name="family_id"/>
+                    <field name="email" optional="hide"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="members_search_view" model="ir.ui.view">
+            <field name="name">members.search</field>
+            <field name="model">bless.member</field>
+            <field name="arch" type="xml">
+                <search string="Members">
+                    <group expand="1" string="Group By">
+
+                        <filter string="Family Category" name="group_family_category" domain="[]"
+                                context="{'group_by':'family_category'}"/>
+                        <filter string="Family" name="group_family" domain="[]"
+                                context="{'group_by':'family_id'}"/>
+
+                        <filter name="boys" string="Male" domain="[('role_in_family','in',['son','husband'])]"/>
+                        <filter name="wife" string="Female" domain="[('role_in_family','in',['wife','daughter'])]"/>
+<!--                        <field name="date_birth"/>-->
+                        <filter string="Birth date" name="date" date="date_birth"/>
+
+
+                    </group>
+
+
+                </search>
+            </field>
+        </record>
+
+        <record id="members_in_service_act_window" model="ir.actions.act_window">
+            <field name="name">Members</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.member</field>
+
+            <field name="view_mode">tree,search</field>
+
+        </record>
+
+        <menuitem name="Members" id="members_menu" parent="main_bless_Menu" sequence="80"/>
+        <menuitem name="Members in service" id="members_in_service_menu" parent="members_menu" sequence="1" action="members_in_service_act_window"/>
+
+    </data>
+</odoo>

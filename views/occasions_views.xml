@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+
+        <record id="occasions_tree_view" model="ir.ui.view">
+            <field name="name">bless.occasions.tree</field>
+            <field name="model">bless.occasions</field>
+            <field name="arch" type="xml">
+                <tree string="Occasions" editable="bottom">
+                    <field name="name" required="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="occasions_act_window" model="ir.actions.act_window">
+            <field name="name">Occasions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.occasions</field>
+
+            <field name="view_mode">tree</field>
+
+        </record>
+
+
+        <menuitem name="Occasions" id="bless_occasions" parent="bless_configurations" action="occasions_act_window" sequence="3"/>
+
+    </data>
+</odoo>
