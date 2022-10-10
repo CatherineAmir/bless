@@ -20,11 +20,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','mail'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'data/sequence.xml',
         'views/regions_views.xml',
         'views/servants_view.xml',
         'views/occasions_views.xml',
@@ -33,6 +34,7 @@
         'views/food_beverage_views.xml',
         'views/concrete_views.xml',
         'views/members_view.xml',
+        'views/giving.xml',
 
 
     ],

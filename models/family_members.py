@@ -6,29 +6,41 @@ from odoo.exceptions import ValidationError
 class Family(models.Model):
     _name = 'bless.family'
     _description = 'Bless Family'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name='family_code'
     _order='family_code'
     # TODo Chatter and logger
-    family_code=fields.Char('Family Code',required=1)
-    family_category=fields.Selection([('inside_service','Inside Service'),
+    family_code = fields.Char('Family Code',required=1,traking=1)
+    family_category = fields.Selection([('inside_service','Inside Service'),
                                       ('outside_service','Outside Service'),
                                       ('hidden_family','Hidden Family'),
                                       ('refugees','Refugees'),
-                                      ('onetime_service','Onetime Service')],required=1)
+                                      ('onetime_service','Onetime Service')],required=1,traking=1)
 
-    responsible_servant=fields.Many2one('bless.servants',string='Responsible Servant')
+    responsible_servant=fields.Many2one('bless.servants',string='Responsible Servant',traking=1)
 
     member_ids=fields.One2many('bless.member','family_id',string='Family Members')
-    family_member_count=fields.Char(compute='_compute_family_count',store=1)
-    girls_member_count=fields.Char(compute='_compute_family_count',store=1)
-    boys_member_count=fields.Char(compute='_compute_family_count',store=1)
+    family_member_count=fields.Integer(compute='_compute_family_count',store=1)
+    girls_member_count=fields.Integer(compute='_compute_family_count',store=1)
+    boys_member_count=fields.Integer(compute='_compute_family_count',store=1)
     husband_name=fields.Char(compute='_compute_husband_name',store=1,string='Husband Name')
 
     # address_fields
-    district=fields.Many2one('bless.regions',string='District')
-    nearby = fields.Char(string='Nearby')
+    district=fields.Many2one('bless.regions',string='District',tracking=1)
+    nearby = fields.Char(string='Nearby',tracking=1)
     building_number = fields.Char(string='Building Number')
     apartment_number = fields.Char( string='Apartment Number')
+    givings_ids = fields.One2many('bless.giving','family_id',string='Givings',traking=1)
+    givings_count=fields.Integer(compute='compute_givings_count',store=1,traking=1)
+    def compute_givings_count(self):
+        for r in self:
+            r.givings_count=len(r.givings_ids)
+    def get_family_givings(self):
+        action = self.env.ref('bless.'
+                              'all_givings_act_window').read()[0]
+        action['domain'] = [('family_id', '=', self.id)]
+        return action
+
     @api.depends('member_ids')
     def _compute_husband_name(self):
         for r in self:

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="periodic_giving_form_view" model="ir.ui.view">
+            <field name="name">bless.giving.form</field>
+            <field name="model">bless.giving</field>
+            <field name="arch" type="xml">
+                <form string="Periodic Giving">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Title"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Giving Data">
+                                <field name="giving_date"/>
+                                <field name="giving_category"/>
+                                <field name="occasion_id"/>
+                                <field name="computed_cost"/>
+                                <field name="create_date"/>
+                                <field name="create_by"/>
+                            </group>
+                            <group string="Family Data">
+
+                                <field name="family_id"/>
+                                <field name="family_husband"/>
+                                <field name="family_category"/>
+                                <field name="people_count"/>
+
+                            </group>
+                        </group>
+                        <notebook attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
+                            <page string="Food Giving Details" name="Giving Name">
+                                <field name="giving_lines_food">
+                                    <tree editable="bottom">
+                                       <field name="giving_type" context="{'default_giving_type':'food_beverage'}"/>
+                                        <field name="beverage_id"/>
+                                        <field name="unit_id"/>
+                                        <field name="cost"/>
+                                    </tree>
+                                </field>
+
+                            </page>
+                            <page string="Concrete Giving Details" name="Giving Name">
+                                <field name="giving_lines_concrete">
+                                    <tree editable="bottom">
+                                       <field name="giving_type" context="{'default_giving_type':'concrete_giving'}"/>
+
+                                        <field name="concrete_id"/>
+                                        <field name="cost"/>
+                                    </tree>
+                                </field>
+
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="giving_tree_view" model="ir.ui.view">
+            <field name="name">bless.giving.tree</field>
+            <field name="model">bless.giving</field>
+            <field name="arch" type="xml">
+                <tree string="Bless Giving">
+                    <field name="name"/>
+                    <field name="giving_category"/>
+                    <field name="giving_date"/>
+                    <field name="occasion_id"/>
+                    <field name="family_id"/>
+                    <field name="family_husband"/>
+                    <field name="family_category"/>
+                    <field name="people_count"/>
+                    <field name="computed_cost" optional="hide"/>
+                    <field name="create_by"/>
+                    <field name="create_date"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="giving_search_view" model="ir.ui.view">
+            <field name="name">bless.giving.search</field>
+            <field name="model">bless.giving</field>
+            <field name="arch" type="xml">
+                <search string="Giving">
+                    <group expand="1" string="Group By">
+                        <field name="name"/>
+                        <filter string="Family Category" name="family" domain="[]"
+                                context="{'group_by':'family_category'}"/>
+                        <filter string="Family" name="family" domain="[]"
+                                context="{'group_by':'family_id'}"/>
+                        <filter string="date" name="Date" domain="[]"
+                                context="{'group_by':'giving_date'}"/>
+                        <filter string="Giving Date" name="giving_date" date="giving_date"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="hand_giving_act_window" model="ir.actions.act_window">
+            <field name="name">Hand Giving</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.giving</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('giving_category','=','hand_giving')]</field>
+            <field name="context">{'default_giving_category':'hand_giving'}</field>
+        </record>
+
+        <record id="coupons_giving_act_window" model="ir.actions.act_window">
+            <field name="name">Coupons Giving</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.giving</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('giving_category','=','coupons')]</field>
+            <field name="context">{'default_giving_category':'coupons'}</field>
+        </record>
+        <record id="money_giving_act_window" model="ir.actions.act_window">
+            <field name="name">Money Giving</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.giving</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('giving_category','=','money_giving')]</field>
+            <field name="context">{'default_giving_category':'money_giving'}</field>
+        </record>
+        <record id="all_givings_act_window" model="ir.actions.act_window">
+            <field name="name">All Givings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.giving</field>
+            <field name="view_mode">tree,form</field>
+
+        </record>
+
+        <menuitem name="Givings" id="all_givings" parent="main_bless_Menu" sequence="10"/>
+        <menuitem name="Hand Givings" id="hand_givings" parent="all_givings" action="hand_giving_act_window" sequence="1"/>
+        <menuitem name="Money Givings" id="money_givings" parent="all_givings" action="money_giving_act_window"  sequence="2"/>
+        <menuitem name="Coupons Givings" id="coupons_givings" parent="all_givings" action="coupons_giving_act_window" sequence="3"/>
+        <menuitem name="All Givings" id="all_givings_submenu" parent="all_givings" action="all_givings_act_window" sequence="4"/>
+    </data>
+</odoo>

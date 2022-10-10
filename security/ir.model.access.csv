@@ -8,3 +8,7 @@ access_occasions,access_occasions,model_bless_occasions,,1,1,1,1
 access_units,access_units,model_bless_units,,1,1,1,1
 access_beverage,access_beverage,model_bless_beverage,,1,1,1,1
 access_concrete,access_concrete,model_bless_concrete,,1,1,1,1
+
+access_periodic_giving,access_periodic_giving,model_bless_giving,,1,1,1,1
+access_periodic_giving_line,access_periodic_giving_line,model_bless_giving_line,,1,1,1,1
+
