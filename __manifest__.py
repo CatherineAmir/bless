@@ -35,6 +35,7 @@
         'views/concrete_views.xml',
         'views/members_view.xml',
         'views/giving.xml',
+        'wizards/create_giving_wizard.xml',
 
 
     ],

@@ -1,4 +1,4 @@
-from odoo import fields, models,api, _
+from odoo import fields, models,api, _,tools
 from datetime import date
 from odoo.exceptions import ValidationError
 
@@ -32,6 +32,12 @@ class Family(models.Model):
     apartment_number = fields.Char( string='Apartment Number')
     givings_ids = fields.One2many('bless.giving','family_id',string='Givings',traking=1)
     givings_count=fields.Integer(compute='compute_givings_count',store=1,traking=1)
+
+    def name_get(self):
+        result = []
+        for record in self:
+            result.append((record.id ,'%s - %s' % (record.family_code,record.husband_name)))
+        return result
     def compute_givings_count(self):
         for r in self:
             r.givings_count=len(r.givings_ids)

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="create_wizard_wizard_view" model="ir.ui.view">
+            <field name="name">bless.create.givings.wizard</field>
+            <field name="model">bless.create.givings</field>
+            <field name="arch" type="xml">
+                <form string="Create Givings">
+                    <sheet>
+
+                        <group>
+                            <group>
+                                <field name="giving_date"/>
+                                <field name="giving_category"/>
+                                <field name="occasion_id"/>
+                                <field name="cost"/>
+                            </group>
+                            <group>
+
+                                <field name="family_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="create_many_givings" string="Create Givings" class="btn btn-primary" type="object"/>
+                            <button name="cancel" string="Cancel" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="create_wizard_act_window" model="ir.actions.act_window">
+            <field name="name">Create givings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bless.create.givings</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="create_wizard_wizard_view"/>
+            <field name="target">new</field>
+
+        </record>
+        <menuitem name="Create Many Givings" id="create_all_givings_submenu" parent="all_givings" action="create_wizard_act_window" sequence="5"/>
+
+
+    </data>
+</odoo>

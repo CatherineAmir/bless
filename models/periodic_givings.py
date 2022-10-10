@@ -6,8 +6,7 @@ class Giving(models.Model):
     _description = 'Bless Giving'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _order='id desc'
-    # to be sequence
-    # to be sequence
+
     name = fields.Char(compute='_compute_name',store=1)
     giving_date=fields.Date(required=1,string='Giving date',traking=1)
     family_id=fields.Many2one('bless.family',autojoin=1,string='Family Code',traking=1)
@@ -18,7 +17,7 @@ class Giving(models.Model):
     computed_cost=fields.Float(compute='compute_giving_cost',store=1,readonly=False,string='cost')
     giving_category=fields.Selection([('hand_giving','Hand Giving'),
                                    ('coupons','coupons'),
-                                      ('money_giving',('Money Giving'))],required=1,string='Giving Type')
+                                      ('money_giving','Money Giving')],required=1,string='Giving Type')
 
     giving_lines_food=fields.One2many('bless.giving.line','giving_id',autojoin=1,domain=[('giving_type','=','food_beverage')])
     giving_lines_concrete=fields.One2many('bless.giving.line','giving_id',autojoin=1,domain=[('giving_type','=','concrete_giving')])
