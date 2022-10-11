@@ -19,12 +19,11 @@
                                 <field name="giving_date"/>
                                 <field name="giving_category"/>
                                 <field name="occasion_id"/>
-                                <field name="computed_cost"/>
+                                <field name="cost"/>
                                 <field name="create_date"/>
                                 <field name="create_by"/>
                             </group>
                             <group string="Family Data">
-
                                 <field name="family_id"/>
                                 <field name="family_husband"/>
                                 <field name="family_category"/>
@@ -39,6 +38,7 @@
                                        <field name="giving_type" context="{'default_giving_type':'food_beverage'}"/>
                                         <field name="beverage_id"/>
                                         <field name="unit_id"/>
+                                        <field name="quantity"/>
                                         <field name="cost"/>
                                     </tree>
                                 </field>
@@ -50,7 +50,9 @@
                                        <field name="giving_type" context="{'default_giving_type':'concrete_giving'}"/>
 
                                         <field name="concrete_id"/>
+                                        <field name="quantity"/>
                                         <field name="cost"/>
+
                                     </tree>
                                 </field>
 
@@ -81,7 +83,7 @@
                     <field name="family_husband"/>
                     <field name="family_category"/>
                     <field name="people_count"/>
-                    <field name="computed_cost" optional="hide"/>
+                    <field name="cost" optional="hide"/>
                     <field name="create_by"/>
                     <field name="create_date"/>
 
@@ -97,6 +99,8 @@
                 <search string="Giving">
                     <group expand="1" string="Group By">
                         <field name="name"/>
+                        <filter string="Giving Type" name="giving_type" domain="[]"
+                                context="{'group_by':'giving_category'}"/>
                         <filter string="Family Category" name="family" domain="[]"
                                 context="{'group_by':'family_category'}"/>
                         <filter string="Family" name="family" domain="[]"

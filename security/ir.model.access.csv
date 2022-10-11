@@ -12,3 +12,4 @@ access_concrete,access_concrete,model_bless_concrete,,1,1,1,1
 access_periodic_giving,access_periodic_giving,model_bless_giving,,1,1,1,1
 access_periodic_giving_line,access_periodic_giving_line,model_bless_giving_line,,1,1,1,1
 access_create_giving_wizard,access_create_giving_wizard,model_bless_create_givings,,1,1,1,1
+access_create_giving_line,access_create_giving_line,model_bless_create_givings_lines,,1,1,1,1

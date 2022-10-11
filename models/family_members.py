@@ -9,15 +9,15 @@ class Family(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name='family_code'
     _order='family_code'
-    # TODo Chatter and logger
-    family_code = fields.Char('Family Code',required=1,traking=1)
+
+    family_code = fields.Char('Family Code',required=1,tracking=1)
     family_category = fields.Selection([('inside_service','Inside Service'),
                                       ('outside_service','Outside Service'),
                                       ('hidden_family','Hidden Family'),
                                       ('refugees','Refugees'),
-                                      ('onetime_service','Onetime Service')],required=1,traking=1)
+                                      ('onetime_service','Onetime Service')],required=1,tracking=1)
 
-    responsible_servant=fields.Many2one('bless.servants',string='Responsible Servant',traking=1)
+    responsible_servant=fields.Many2one('bless.servants',string='Responsible Servant',tracking=1)
 
     member_ids=fields.One2many('bless.member','family_id',string='Family Members')
     family_member_count=fields.Integer(compute='_compute_family_count',store=1)
@@ -30,8 +30,8 @@ class Family(models.Model):
     nearby = fields.Char(string='Nearby',tracking=1)
     building_number = fields.Char(string='Building Number')
     apartment_number = fields.Char( string='Apartment Number')
-    givings_ids = fields.One2many('bless.giving','family_id',string='Givings',traking=1)
-    givings_count=fields.Integer(compute='compute_givings_count',store=1,traking=1)
+    givings_ids = fields.One2many('bless.giving','family_id',string='Givings',tracking=1)
+    givings_count=fields.Integer(compute='compute_givings_count',store=1,tracking=1)
 
     def name_get(self):
         result = []
