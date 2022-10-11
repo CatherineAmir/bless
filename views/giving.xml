@@ -30,6 +30,21 @@
                                 <field name="people_count"/>
 
                             </group>
+                            <group string="Coupon Data" attrs="{'invisible':[('giving_category','!=','coupons')]}">
+                                <group>
+                                    <field name="coupon_category"/>
+                                    <field name="from_receipt_time"/>
+                                    <field name="from_period"/>
+                                    <field name="to_receipt_time"/>
+                                    <field name="to_period"/>
+
+
+
+
+
+                                </group>
+
+                            </group>
                         </group>
                         <notebook attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
                             <page string="Food Giving Details" name="Giving Name">

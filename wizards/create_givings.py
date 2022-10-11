@@ -17,6 +17,13 @@ class CreateGiving(models.TransientModel):
 
     giving_lines_concrete = fields.Many2many('bless.create.givings.lines','lines_concrete', 'src_id', 'dest_id', auto_join=1)
 
+    coupon_category = fields.Selection([('food', 'Food'),
+                                        ('clothes', 'Clothes'),
+                                        ], string='Coupon type')
+    from_receipt_time = fields.Float()
+    from_period = fields.Selection([('pm', 'PM'), ('am', 'Am')])
+    to_receipt_time = fields.Float()
+    to_period = fields.Selection([('pm', 'PM'), ('am', 'Am')])
 
     @api.depends('giving_lines_food','giving_lines_concrete')
     def compute_cost(self):
@@ -37,7 +44,14 @@ class CreateGiving(models.TransientModel):
                 'giving_category':self.giving_category,
                 'family_id':family.id,
                 'cost':self.cost,
-                'occasion_id':self.occasion_id.id
+                'occasion_id':self.occasion_id.id,
+                'coupon_category':self.coupon_category,
+                'from_receipt_time':self.from_receipt_time,
+                'from_period':self.from_period,
+                'to_receipt_time':self.to_receipt_time,
+                'to_period':self.to_period,
+
+
             }
                 givings.append(one_giving)
             created_givings = self.env['bless.giving'].create(givings)

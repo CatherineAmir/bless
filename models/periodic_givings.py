@@ -19,6 +19,15 @@ class Giving(models.Model):
                                    ('coupons','Coupons'),
                                       ('money_giving','Money Giving')],required=1,string='Giving Type')
 
+    coupon_category=fields.Selection([('food','Food'),
+                                     ('clothes','Clothes'),
+                                   ],string='Coupon type')
+    from_receipt_time=fields.Float()
+    from_period=fields.Selection([('pm','PM'),('am','Am')])
+    to_receipt_time=fields.Float()
+    to_period = fields.Selection([('pm', 'PM'), ('am', 'Am')])
+
+
     giving_lines_food=fields.One2many('bless.giving.line','giving_id',auto_join=1,
                                       domain=[('giving_type','=','food_beverage')])
     giving_lines_concrete=fields.One2many('bless.giving.line','giving_id',auto_join=1,

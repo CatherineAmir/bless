@@ -36,6 +36,7 @@
         'views/members_view.xml',
         'views/giving.xml',
         'wizards/create_giving_wizard.xml',
+        'reports/report.xml',
 
 
     ],

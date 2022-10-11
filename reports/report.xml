@@ -2,23 +2,85 @@
 <odoo>
     <data>
 
-        <report
-                id="report_ModelName"
-                model="ProjectName.ModelName"
-                string="ReportTitle"
-                name="ProjectName.report_ModelName_view"
-                file="ProjectName.report_ModelName"
-                report_type="qweb-pdf"/>
+        <record id="report_giving_label" model="ir.actions.report">
+            <field name="name">Giving Coupons (PDF)</field>
+            <field name="model">bless.giving</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">bless.report_givings</field>
+            <field name="report_file">Givings</field>
+            <field name="print_report_name">'Givings - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="bless.model_bless_giving"/>
+            <field name="binding_type">report</field>
+        </record>
 
-        <template id="report_ModelName_view">
-            <t t-call="web.html_container">
-                <t t-foreach="docs" t-as="doc">
-                    <t t-call="web.external_layout">
-                        <div class="page">
+        <template id="report_givings_template">
+            <div style="width: 45%; display: inline-table; height:14rem;">
+                <table class="table table-bordered mb-0" style="border: 2px solid black;width:100%;">
+                    <tr>
+                        <th class="table-active text-left float-left" style="height: 8rem; width:100%;">
+                             <img src="/bless/static/src/img/oct_dioseces.png" style="max-height: 70px;" alt="Logo" class="img-thumbnail rounded float-right"/>
 
-                        </div>
+                            <strong class="table-active text-left float-left">أسرة الحياة الأفضل</strong>
+                            <br/>
+                            <br/>
+                            <t t-if="give.coupon_category">
+                                    <strong t-field="give.coupon_category"/>
+                            </t>
+
+
+                            <div class= "col-8 mb4" >
+                                <strong t-field="give.name"/>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="height: 4rem; text-align:right; width:20%;">
+                            <strong>اسم رب الاسرة :</strong>
+                            <strong t-field="give.family_husband"/>
+                            <br/>
+                            <br/>
+                            <strong> كود الاسرة :</strong>
+                            <strong t-field="give.family_id.family_code"/>
+                            <br/>
+                            <br/>
+                             <strong>عدد افراد الاسرة:</strong>
+                            <strong t-field="give.people_count"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 2rem;  text-align:right; width:20%;">
+                        <strong> تاريخ الصرف:</strong>
+                            <strong t-field="give.giving_date"></strong>
+                            <br/>
+                            <strong>من الساعة:</strong>
+                            <strong t-field="give.from_receipt_time"></strong>
+                            <strong t-field="give.from_period"></strong>
+                            <br/>
+
+                            <strong>إلى الساعة:</strong>
+                            <strong t-field="give.to_receipt_time"></strong>
+                            <strong t-field="give.to_period"></strong>
+
+
+
+
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </template>
+
+        <template id="report_givings">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <t t-foreach="docs" t-as="give">
+                        <t t-call="bless.report_givings_template">
+                            <t t-set="give" t-value="give"/>
+                        </t>
                     </t>
-                </t>
+                </div>
             </t>
         </template>
 
