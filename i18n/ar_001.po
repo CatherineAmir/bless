@@ -1,0 +1,1094 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bless
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-11 15:34+0000\n"
+"PO-Revision-Date: 2022-10-11 15:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving_line__giving_type__concrete_giving
+msgid " Concrete Giving"
+msgstr "بركات عينية"
+
+#. module: bless
+#: model:ir.actions.report,print_report_name:bless.report_giving_label
+msgid "'Givings - %s' % (object.name)"
+msgstr "العطايا"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid ""
+"<br/>\n"
+"\n"
+"                            <strong>إلى الساعة:</strong>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                             <strong>عدد افراد الاسرة:</strong>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid ""
+"<br/>\n"
+"                            <br/>\n"
+"                            <strong> كود الاسرة :</strong>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid ""
+"<br/>\n"
+"                            <strong>من الساعة:</strong>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid ""
+"<strong class=\"table-active text-left float-left\">أسرة الحياة الأفضل</strong>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid "<strong> تاريخ الصرف:</strong>"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid "<strong>اسم رب الاسرة :</strong>"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_needaction
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_ids
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_ids
+msgid "Activities"
+msgstr ""
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_exception_decoration
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_state
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_type_icon
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.all_givings_act_window
+#: model:ir.ui.menu,name:bless.all_givings_submenu
+msgid "All Givings"
+msgstr "كل "
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__am
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__to_period__am
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__from_period__am
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__to_period__am
+msgid "Am"
+msgstr "صباحا"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__apartment_number
+msgid "Apartment Number"
+msgstr "رقم الشقة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_attachment_count
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد الملفات"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.main_bless_Menu
+msgid "BLESS"
+msgstr "البركة"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.beverage_act_window
+msgid "Beverage"
+msgstr "المنتجات الغذائية"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Birth date"
+msgstr "تاريخ الميلاد"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_concrete
+msgid "Bless Concrete"
+msgstr "بركات عينية"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_family
+msgid "Bless Family"
+msgstr "اسر الحياه الافضل"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_beverage
+msgid "Bless Food and Bevereage"
+msgstr "المنتجات الغذائية"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_giving
+#: model:ir.model,name:bless.model_bless_giving_line
+#: model_terms:ir.ui.view,arch_db:bless.giving_tree_view
+msgid "Bless Giving"
+msgstr "عطابا البركة"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_member
+msgid "Bless Members"
+msgstr "افراد الحياه الافضل"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__boys_member_count
+msgid "Boys Member Count"
+msgstr "عدد الاولاد"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__building_number
+msgid "Building Number"
+msgstr "رقم العقار"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
+msgid "Cancel"
+msgstr "الفاء"
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__coupon_category__clothes
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__coupon_category__clothes
+msgid "Clothes"
+msgstr "الملابس"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.concrete_act_window
+#: model:ir.ui.menu,name:bless.bless_concrete
+#: model_terms:ir.ui.view,arch_db:bless.concrete_tree_view
+msgid "Concrete"
+msgstr "عينية"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__concrete_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__concrete_id
+msgid "Concrete Giving"
+msgstr "عطايا عينية"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Concrete Giving Details"
+msgstr "تفاصيل العطايا العينية"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.bless_configurations
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Coupon Data"
+msgstr "بيانات الكوبون"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__coupon_category
+#: model:ir.model.fields,field_description:bless.field_bless_giving__coupon_category
+msgid "Coupon type"
+msgstr "نوع الكوبون"
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__giving_category__coupons
+msgid "Coupons"
+msgstr "الكوبونات"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.coupons_giving_act_window
+msgid "Coupons Giving"
+msgstr "عطايا الكوبونات"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.coupons_givings
+msgid "Coupons Givings"
+msgstr "عطايا الكوبونات"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_create_givings_lines
+msgid "Create  Givings Lines"
+msgstr "انشاء عطايا"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_giving__create_by
+msgid "Create By"
+msgstr "اُنشأ بواسطة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_giving__create_date
+msgid "Create Date"
+msgstr "أُنشأ في"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
+msgid "Create Givings"
+msgstr "أنشاء عطايا"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.create_all_givings_submenu
+msgid "Create Many Givings"
+msgstr "أنشاء عطايا"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.create_wizard_act_window
+msgid "Create givings"
+msgstr "أنشاء عطايا"
+
+#. module: bless
+#: model:ir.model,name:bless.model_bless_create_givings
+msgid "Create simple Givings"
+msgstr "أنشاء عطايا"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_family__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_giving__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_member__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_regions__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_servants__create_uid
+#: model:ir.model.fields,field_description:bless.field_bless_units__create_uid
+msgid "Created by"
+msgstr "اُنشأ بواسطة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_family__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_member__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_regions__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_servants__create_date
+#: model:ir.model.fields,field_description:bless.field_bless_units__create_date
+msgid "Created on"
+msgstr "اُنشأ بواسطة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__date_birth
+msgid "Date Birth"
+msgstr "تاريخ الميلاد
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__daughter
+msgid "Daughter"
+msgstr "ابنة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_family__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_giving__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_member__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_regions__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_servants__display_name
+#: model:ir.model.fields,field_description:bless.field_bless_units__display_name
+msgid "Display Name"
+msgstr "اسم"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__district
+msgid "District"
+msgstr "الحي /المنطقة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__egyptian
+msgid "Egyptian"
+msgstr "مصري"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__email
+msgid "Email"
+msgstr "البريد الاكتروني"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.family_hidden_service
+msgid "Families Hidden"
+msgstr "اسر مستترة"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.family_in_service
+msgid "Families In Services"
+msgstr "اسر داخل الخدمة"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.family_onetime_service
+msgid "Families Onetime"
+msgstr "اسر تٌخدم مرة واحدة"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.family_out_service
+msgid "Families Outside Services"
+msgstr "أسر خارج الخدمة"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.family_refugees_service
+msgid "Families Refugees"
+msgstr "اسر الاجئيين"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__family_id
+#: model:ir.ui.menu,name:bless.bless_Family
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_tree
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Family"
+msgstr "الأسر"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_form
+msgid "Family Address"
+msgstr "عنوان الاسرة"
+
+#. module: bless
+#: code:addons/bless/models/family_members.py:0
+#, python-format
+msgid "Family Can Only Contain one Husband"
+msgstr "يجب أن تحتوي الاسرة على رب اسرة واحد فقط"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__family_category
+#: model:ir.model.fields,field_description:bless.field_bless_giving__family_category
+#: model:ir.model.fields,field_description:bless.field_bless_member__family_category
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Family Category"
+msgstr "نوع الاسرة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__family_ids
+#: model:ir.model.fields,field_description:bless.field_bless_family__family_code
+#: model:ir.model.fields,field_description:bless.field_bless_giving__family_id
+msgid "Family Code"
+msgstr "كود الاسرة"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_form
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Family Data"
+msgstr "بيانات الاسرة"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.family_in_service_action
+msgid "Family In Service"
+msgstr "اسرة داخل الخدمة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__family_member_count
+msgid "Family Member Count"
+msgstr "عدد أفراد الاسرة"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__member_ids
+msgid "Family Members"
+msgstr "أفراد الاسرة"
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.family_out_service_action
+msgid "Family out Service"
+msgstr "أسرة خارج الخدمة
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Female"
+msgstr "أنثي"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_follower_ids
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_channel_ids
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_partner_ids
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__activity_type_icon
+#: model:ir.model.fields,help:bless.field_bless_giving__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__coupon_category__food
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__coupon_category__food
+msgid "Food"
+msgstr "كوبون صرف مواد غئذائية"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__beverage_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__beverage_id
+msgid "Food And Beverage"
+msgstr "منتجات غذائية"
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving_line__giving_type__food_beverage
+msgid "Food Beverage"
+msgstr "منتجات غذائية"
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Food Giving Details"
+msgstr "منتجات غذائية"
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.bless_beverage
+#: model_terms:ir.ui.view,arch_db:bless.beverage_tree_view
+msgid "Food and Beverage"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__from_period
+#: model:ir.model.fields,field_description:bless.field_bless_giving__from_period
+msgid "From Period"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__from_receipt_time
+#: model:ir.model.fields,field_description:bless.field_bless_giving__from_receipt_time
+msgid "From Receipt Time"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__girls_member_count
+msgid "Girls Member Count"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__giving_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__giving_id
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+msgid "Giving"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.report,name:bless.report_giving_label
+msgid "Giving Coupons (PDF)"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Giving Data"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__giving_date
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+msgid "Giving Date"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__giving_lines_concrete
+#: model:ir.model.fields,field_description:bless.field_bless_giving__giving_lines_concrete
+msgid "Giving Lines Concrete"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__giving_lines_food
+#: model:ir.model.fields,field_description:bless.field_bless_giving__giving_lines_food
+msgid "Giving Lines Food"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__giving_category
+#: model:ir.model.fields,field_description:bless.field_bless_giving__giving_category
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__giving_type
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+msgid "Giving Type"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__giving_category
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__giving_category
+msgid "Giving category"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_giving__giving_date
+msgid "Giving date"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__givings_ids
+#: model:ir.ui.menu,name:bless.all_givings
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_form
+msgid "Givings"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__givings_count
+msgid "Givings Count"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.hand_giving_act_window
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__giving_category__hand_giving
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__giving_category__hand_giving
+msgid "Hand Giving"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.hand_givings
+msgid "Hand Givings"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.family_hidden_service_action
+msgid "Hidden Families"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__hidden_family
+msgid "Hidden Family"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__husband
+msgid "Husband"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__husband_name
+msgid "Husband Name"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_giving__family_husband
+msgid "Husband name"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__id
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__id
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__id
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__id
+#: model:ir.model.fields,field_description:bless.field_bless_family__id
+#: model:ir.model.fields,field_description:bless.field_bless_giving__id
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__id
+#: model:ir.model.fields,field_description:bless.field_bless_member__id
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__id
+#: model:ir.model.fields,field_description:bless.field_bless_regions__id
+#: model:ir.model.fields,field_description:bless.field_bless_servants__id
+#: model:ir.model.fields,field_description:bless.field_bless_units__id
+msgid "ID"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_exception_icon
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__activity_exception_icon
+#: model:ir.model.fields,help:bless.field_bless_giving__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__message_needaction
+#: model:ir.model.fields,help:bless.field_bless_family__message_unread
+#: model:ir.model.fields,help:bless.field_bless_giving__message_needaction
+#: model:ir.model.fields,help:bless.field_bless_giving__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__message_has_error
+#: model:ir.model.fields,help:bless.field_bless_giving__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__inside_service
+msgid "Inside Service"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_is_follower
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_concrete____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_family____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_giving____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_member____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_occasions____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_regions____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_servants____last_update
+#: model:ir.model.fields,field_description:bless.field_bless_units____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_family__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_giving__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_member__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_regions__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_servants__write_uid
+#: model:ir.model.fields,field_description:bless.field_bless_units__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_family__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_giving__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_member__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_regions__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_servants__write_date
+#: model:ir.model.fields,field_description:bless.field_bless_units__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.report_givings_template
+msgid "Logo"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_main_attachment_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Male"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.members_hidden_service_act_window
+#: model:ir.actions.act_window,name:bless.members_in_service_act_window
+#: model:ir.actions.act_window,name:bless.members_one_time_service_act_window
+#: model:ir.actions.act_window,name:bless.members_out_service_act_window
+#: model:ir.actions.act_window,name:bless.members_refugees_service_act_window
+#: model:ir.ui.menu,name:bless.members_menu
+#: model_terms:ir.ui.view,arch_db:bless.Members_tree_view
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_form
+#: model_terms:ir.ui.view,arch_db:bless.members_search_view
+msgid "Members"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.members_hidden_service_menu
+msgid "Members hidden service"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.members_in_service_menu
+msgid "Members in service"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.members_onetime_service_menu
+msgid "Members onetime service"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.members_out_service_menu
+msgid "Members outside service"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.members_refugees_service_menu
+msgid "Members refugees service"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_has_error
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_ids
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.money_giving_act_window
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__giving_category__money_giving
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__giving_category__money_giving
+msgid "Money Giving"
+msgstr ""
+
+#. module: bless
+#: model:ir.ui.menu,name:bless.money_givings
+msgid "Money Givings"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__my_activity_date_deadline
+#: model:ir.model.fields,field_description:bless.field_bless_giving__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__name
+#: model:ir.model.fields,field_description:bless.field_bless_concrete__name
+#: model:ir.model.fields,field_description:bless.field_bless_giving__name
+#: model:ir.model.fields,field_description:bless.field_bless_member__name
+#: model:ir.model.fields,field_description:bless.field_bless_occasions__name
+#: model:ir.model.fields,field_description:bless.field_bless_regions__name
+#: model:ir.model.fields,field_description:bless.field_bless_servants__name
+#: model:ir.model.fields,field_description:bless.field_bless_units__name
+msgid "Name"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__national_id
+msgid "National"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__nearby
+msgid "Nearby"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_date_deadline
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_summary
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_type_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_needaction_counter
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_has_error_counter
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__message_needaction_counter
+#: model:ir.model.fields,help:bless.field_bless_giving__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__message_has_error_counter
+#: model:ir.model.fields,help:bless.field_bless_giving__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__message_unread_counter
+#: model:ir.model.fields,help:bless.field_bless_giving__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__occasion_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving__occasion_id
+msgid "Occasion"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.occasions_act_window
+#: model:ir.model,name:bless.model_bless_occasions
+#: model:ir.ui.menu,name:bless.bless_occasions
+#: model_terms:ir.ui.view,arch_db:bless.occasions_tree_view
+msgid "Occasions"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__onetime_service
+msgid "Onetime Service"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__other
+msgid "Other"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__outside_service
+msgid "Outside Service"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__pm
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__to_period__pm
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__from_period__pm
+#: model:ir.model.fields.selection,name:bless.selection__bless_giving__to_period__pm
+msgid "PM"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Periodic Giving"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__phone_number
+msgid "Phone Number"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__price
+msgid "Price"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__quantity
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__refugees
+msgid "Refugees"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.family_onetime_service_action
+#: model:ir.actions.act_window,name:bless.family_refugees_service_action
+msgid "Refugees Families"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.regions_act_window
+#: model:ir.model,name:bless.model_bless_regions
+#: model:ir.ui.menu,name:bless.bless_regions
+#: model_terms:ir.ui.view,arch_db:bless.region_tree_view
+msgid "Regions"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__responsible_servant
+msgid "Responsible Servant"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__activity_user_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__role_in_family
+msgid "Role In Family"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.servants_act_window
+#: model:ir.model,name:bless.model_bless_servants
+#: model:ir.ui.menu,name:bless.bless_servants
+#: model_terms:ir.ui.view,arch_db:bless.servant_tree_view
+msgid "Servants"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__son
+msgid "Son"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__activity_state
+#: model:ir.model.fields,help:bless.field_bless_giving__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: bless
+#: code:addons/bless/models/family_members.py:0
+#, python-format
+msgid "This egyptian National ID Is not Valid"
+msgstr ""
+
+#. module: bless
+#: code:addons/bless/models/family_members.py:0
+#, python-format
+msgid "This egyptian National ID Is not Valid %s"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
+msgid "Title"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__to_period
+#: model:ir.model.fields,field_description:bless.field_bless_giving__to_period
+msgid "To Period"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__to_receipt_time
+#: model:ir.model.fields,field_description:bless.field_bless_giving__to_receipt_time
+msgid "To Receipt Time"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,help:bless.field_bless_family__activity_exception_decoration
+#: model:ir.model.fields,help:bless.field_bless_giving__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_beverage__unit_id
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__unit_id
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__unit_id
+msgid "Unit"
+msgstr ""
+
+#. module: bless
+#: model:ir.actions.act_window,name:bless.units_act_window
+#: model:ir.model,name:bless.model_bless_units
+#: model:ir.ui.menu,name:bless.bless_units
+#: model_terms:ir.ui.view,arch_db:bless.units_tree_view
+msgid "Units"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_unread
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_family__message_unread_counter
+#: model:ir.model.fields,field_description:bless.field_bless_giving__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_servants__user_id
+msgid "User"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__wife
+msgid "Wife"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__cost
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__cost
+#: model:ir.model.fields,field_description:bless.field_bless_giving__cost
+#: model:ir.model.fields,field_description:bless.field_bless_giving_line__cost
+msgid "cost"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__giving_category__coupons
+msgid "coupons"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.giving_search_view
+msgid "date"
+msgstr ""
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_giving__people_count
+msgid "family member count"
+msgstr ""
+
+#. module: bless
+#: model_terms:ir.ui.view,arch_db:bless.bless_family_form
+msgid "family_code"
+msgstr ""
