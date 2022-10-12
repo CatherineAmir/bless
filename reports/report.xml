@@ -53,12 +53,12 @@
                             <strong t-field="give.giving_date"></strong>
                             <br/>
                             <strong>من الساعة:</strong>
-                            <strong t-field="give.from_receipt_time"></strong>
+                            <strong t-field="give.from_receipt_time" t-options='{"widget": "float_time"}'></strong>
                             <strong t-field="give.from_period"></strong>
                             <br/>
 
                             <strong>إلى الساعة:</strong>
-                            <strong t-field="give.to_receipt_time"></strong>
+                            <strong t-field="give.to_receipt_time" t-options='{"widget": "float_time"}'></strong>
                             <strong t-field="give.to_period"></strong>
 
 
