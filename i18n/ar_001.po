@@ -108,7 +108,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:bless.all_givings_act_window
 #: model:ir.ui.menu,name:bless.all_givings_submenu
 msgid "All Givings"
-msgstr "كل "
+msgstr "كل العطايا "
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__am
@@ -205,7 +205,7 @@ msgstr "اغلق"
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__coupon_category__clothes
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__coupon_category__clothes
 msgid "Clothes"
-msgstr "الملابس"
+msgstr " كوبون صرف ملابس العيد"
 
 #. module: bless
 #: model:ir.actions.act_window,name:bless.concrete_act_window

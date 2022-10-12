@@ -43,7 +43,7 @@
                                 <field name="girls_member_count"/>
                             </group>
                             <group string="Family Address">
-                                <field name="district" required="1"/>
+                                <field name="district" required="0"/>
                                 <field name="nearby" reqiured="0"/>
                                 <field name="building_number" required="0"/>
                                 <field name="apartment_number" required="0"/>
