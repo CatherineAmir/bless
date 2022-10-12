@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 12:03+0000\n"
-"PO-Revision-Date: 2022-10-12 12:03+0000\n"
+"POT-Creation-Date: 2022-10-12 12:21+0000\n"
+"PO-Revision-Date: 2022-10-12 12:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -190,6 +190,11 @@ msgstr "الفاء"
 #: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
 msgid "Close"
 msgstr "اغلق"
+
+#. module: bless
+#: model:ir.actions.server,name:bless.action_multi_close
+msgid "Close Givings"
+msgstr "غلق البركات"
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__state__closed
@@ -912,6 +917,11 @@ msgstr "المناسبات"
 #: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__onetime_service
 msgid "Onetime Service"
 msgstr "خدمة مرة واحدة"
+
+#. module: bless
+#: model:ir.actions.server,name:bless.action_multi_open
+msgid "Open Givings"
+msgstr "فتح البركات"
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__state__opened

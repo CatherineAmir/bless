@@ -113,6 +113,7 @@
                     <field name="family_category"/>
                     <field name="people_count"/>
                     <field name="cost" optional="hide"/>
+                    <field name="state"/>
                     <field name="create_by"/>
                     <field name="create_date"/>
 
@@ -175,10 +176,29 @@
 
         </record>
 
+
+
         <menuitem name="Givings" id="all_givings" parent="main_bless_Menu" sequence="10"/>
         <menuitem name="Hand Givings" id="hand_givings" parent="all_givings" action="hand_giving_act_window" sequence="1"/>
         <menuitem name="Money Givings" id="money_givings" parent="all_givings" action="money_giving_act_window"  sequence="2"/>
         <menuitem name="Coupons Givings" id="coupons_givings" parent="all_givings" action="coupons_giving_act_window" sequence="3"/>
         <menuitem name="All Givings" id="all_givings_submenu" parent="all_givings" action="all_givings_act_window" sequence="4"/>
+         <record model="ir.actions.server" id="action_multi_close">
+              <field name="name">Close Givings</field>
+              <field name="model_id" ref="bless.model_bless_giving"/>
+              <field name="binding_model_id" ref="bless.model_bless_giving"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_close()</field>
+        </record>
+        <record model="ir.actions.server" id="action_multi_open">
+              <field name="name">Open Givings</field>
+              <field name="model_id" ref="bless.model_bless_giving"/>
+              <field name="binding_model_id" ref="bless.model_bless_giving"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_open()</field>
+        </record>
+
     </data>
 </odoo>
