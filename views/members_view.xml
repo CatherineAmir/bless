@@ -31,7 +31,7 @@
             <field name="name">bless.member.tree</field>
             <field name="model">bless.member</field>
             <field name="arch" type="xml">
-                <tree string="Members" create="false" edit="false">
+                <tree string="Members" create="1" edit="false">
                     <field name="name"/>
                     <field name="role_in_family"/>
                     <field name="egyptian"/>
@@ -51,6 +51,8 @@
             <field name="arch" type="xml">
                 <search string="Members">
                     <group expand="1" string="Group By">
+                        <field name="national_id"/>
+                        <field name="phone_number"/>
 
                         <filter string="Family Category" name="group_family_category" domain="[]"
                                 context="{'group_by':'family_category'}"/>

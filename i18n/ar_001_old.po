@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 12:03+0000\n"
-"PO-Revision-Date: 2022-10-12 12:03+0000\n"
+"POT-Creation-Date: 2022-10-12 11:35+0000\n"
+"PO-Revision-Date: 2022-10-12 11:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -347,7 +347,6 @@ msgstr "اسم"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_family__district
-#: model_terms:ir.ui.view,arch_db:bless.bless_family_search_view
 msgid "District"
 msgstr "الحي /المنطقة"
 
@@ -389,7 +388,6 @@ msgstr "اسر الاجئيين"
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_member__family_id
 #: model:ir.ui.menu,name:bless.bless_Family
-#: model_terms:ir.ui.view,arch_db:bless.bless_family_search_view
 #: model_terms:ir.ui.view,arch_db:bless.bless_family_tree
 #: model_terms:ir.ui.view,arch_db:bless.giving_search_view
 #: model_terms:ir.ui.view,arch_db:bless.members_search_view
@@ -411,7 +409,6 @@ msgstr "يجب أن تحتوي الاسرة على رب اسرة واحد فقط
 #: model:ir.model.fields,field_description:bless.field_bless_family__family_category
 #: model:ir.model.fields,field_description:bless.field_bless_giving__family_category
 #: model:ir.model.fields,field_description:bless.field_bless_member__family_category
-#: model_terms:ir.ui.view,arch_db:bless.bless_family_search_view
 #: model_terms:ir.ui.view,arch_db:bless.giving_search_view
 #: model_terms:ir.ui.view,arch_db:bless.members_search_view
 msgid "Family Category"
@@ -596,7 +593,6 @@ msgid "Givings Count"
 msgstr "عدد البركات"
 
 #. module: bless
-#: model_terms:ir.ui.view,arch_db:bless.bless_family_search_view
 #: model_terms:ir.ui.view,arch_db:bless.giving_search_view
 #: model_terms:ir.ui.view,arch_db:bless.members_search_view
 msgid "Group By"
@@ -998,11 +994,6 @@ msgid "Role In Family"
 msgstr "الدور في الاسرة"
 
 #. module: bless
-#: model_terms:ir.ui.view,arch_db:bless.bless_family_search_view
-msgid "Servant"
-msgstr "الخادم المسئول"
-
-#. module: bless
 #: model:ir.actions.act_window,name:bless.servants_act_window
 #: model:ir.model,name:bless.model_bless_servants
 #: model:ir.ui.menu,name:bless.bless_servants
@@ -1146,8 +1137,3 @@ msgstr "عدد افراد الاسرة"
 #: model_terms:ir.ui.view,arch_db:bless.bless_family_form
 msgid "family_code"
 msgstr "كود الاسرة"
-
-#. module: bless
-#: model:ir.model.constraint,message:bless.constraint_bless_member_unique_national_id
-msgid "national_id must be unique"
-msgstr "يجب ان يكون الرقم القومي غير متكرر .. هذا الرقم موجود من قبل"

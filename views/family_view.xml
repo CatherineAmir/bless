@@ -103,18 +103,26 @@
             </field>
         </record>
 
-<!--        <record id="ModelName_search_view" model="ir.ui.view">-->
-<!--            <field name="name">ProjectName.ModelName.search</field>-->
-<!--            <field name="model">ProjectName.ModelName</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <search string="ModelTitle">-->
-<!--                    <group expand="1" string="Group By">-->
-<!--                        <filter string="Example Field" name="example_field" domain="[]"-->
-<!--                                context="{'group_by':'example_field'}"/>-->
-<!--                    </group>-->
-<!--                </search>-->
-<!--            </field>-->
-<!--        </record>-->
+        <record id="bless_family_search_view" model="ir.ui.view">
+            <field name="name">bless.family.search</field>
+            <field name="model">bless.family</field>
+            <field name="arch" type="xml">
+                <search string="Family">
+                    <field name="family_code"/>
+                    <field name="responsible_servant"/>
+                    <field name="husband_name"/>
+                    <field name="district"/>
+                    <group expand="1" string="Group By">
+                        <filter string="District" name="district" domain="[]"
+                                context="{'group_by':'district'}"/>
+                        <filter string="Servant" name="servant" domain="[]"
+                                context="{'group_by':'responsible_servant'}"/>
+                        <filter string="Family Category" name="category" domain="[]"
+                                context="{'group_by':'family_category'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
 
         <record id="family_in_service_action" model="ir.actions.act_window">
             <field name="name">Family In Service</field>

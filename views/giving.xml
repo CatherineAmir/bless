@@ -7,6 +7,13 @@
             <field name="model">bless.giving</field>
             <field name="arch" type="xml">
                 <form string="Periodic Giving">
+                    <header>
+                        <button name="action_close" string="Close" type="object" class="btn btn-primary"
+                                attrs="{'invisible':[('state','=','closed')]}"/>
+                        <button name="action_open" string="Reopen" type="object" class="btn btn-secondary"
+                                attrs="{'invisible':[('state','=','opened')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
                     <sheet>
                         <div class="oe_title">
                             <label for="name"/>
@@ -30,42 +37,49 @@
                                 <field name="people_count"/>
 
                             </group>
+                        </group>
                             <group string="Coupon Data" attrs="{'invisible':[('giving_category','!=','coupons')]}">
                                 <group>
-                                    <field name="coupon_category"/>
-                                    <field name="from_receipt_time"/>
-                                    <field name="from_period"/>
-                                    <field name="to_receipt_time"/>
-                                    <field name="to_period"/>
-
-
-
-
-
+                                    <field name="coupon_category" required="1" widget="selection_badge"/>
                                 </group>
+                            <group>
+                                     <div class="d-flex" style="text-align:center;">
+                                         <label for="from_receipt_time"/>
+                                            <strong><field name="from_receipt_time" widget="float_time" required="1"/></strong>
+
+                                            <field name="from_period" widget="selection_badge" required="1"/>
+                                    </div>
+                                    <div class="d-flex" style="text-align:center;">
+                                         <h2><label for="to_receipt_time"/></h2>
+                                        <strong><field name="to_receipt_time" widget="float_time" required="1"/></strong>
+
+                                            <field name="to_period" widget="selection_badge" required="1"/>
+                                    </div>
+                            </group>
+
 
                             </group>
-                        </group>
+
                         <notebook attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
                             <page string="Food Giving Details" name="Giving Name">
-                                <field name="giving_lines_food">
+                                <field name="giving_lines_food" context="{'default_giving_type':'food_beverage'}" domain="[('giving_type','=','food_beverage')]">
                                     <tree editable="bottom">
-                                       <field name="giving_type" context="{'default_giving_type':'food_beverage'}"/>
-                                        <field name="beverage_id"/>
+                                       <field name="giving_type" readonly="1"/>
+                                        <field name="beverage_id" required="1"/>
                                         <field name="unit_id"/>
-                                        <field name="quantity"/>
+                                        <field name="quantity" required="1"/>
                                         <field name="cost"/>
                                     </tree>
                                 </field>
 
                             </page>
                             <page string="Concrete Giving Details" name="Giving Name">
-                                <field name="giving_lines_concrete">
+                                <field name="giving_lines_concrete" context="{'default_giving_type':'concrete_giving'}" domain="[('giving_type','=','concrete_giving')]">
                                     <tree editable="bottom">
-                                       <field name="giving_type" context="{'default_giving_type':'concrete_giving'}"/>
+                                       <field name="giving_type" readonly="1"/>
 
-                                        <field name="concrete_id"/>
-                                        <field name="quantity"/>
+                                        <field name="concrete_id" required="1"/>
+                                        <field name="quantity" required="1"/>
                                         <field name="cost"/>
 
                                     </tree>

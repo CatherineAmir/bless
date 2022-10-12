@@ -38,6 +38,7 @@ class Family(models.Model):
         for record in self:
             result.append((record.id ,'%s - %s' % (record.family_code,record.husband_name)))
         return result
+    @api.depends('givings_ids')
     def compute_givings_count(self):
         for r in self:
             r.givings_count=len(r.givings_ids)
@@ -76,6 +77,7 @@ class Member(models.Model):
     _description='Bless Members'
 
     name=fields.Char(required=1)
+    # todo phone number Validation and National id validation
 
     role_in_family=fields.Selection([('husband','Husband'),
                                      ('wife','Wife'),
@@ -90,6 +92,12 @@ class Member(models.Model):
     family_category=fields.Selection(related='family_id.family_category',store=1)
 
     email=fields.Char()
+    _sql_constraints = [
+        ('unique_national_id',
+         'unique(national_id)',
+         'national_id must be unique'),
+
+    ]
 
 
 
@@ -123,6 +131,23 @@ class Member(models.Model):
 
 
 
+
+    @api.constrains('national_id')
+    def check_national_id(self):
+        for r in self:
+            if r.egyptian and r.national_id:
+                if len(r.national_id)!=14:
+                    raise ValidationError(_("This egyptian National ID Is not Valid"))
+
+    @api.constrains('phone_number')
+    def check_phone_number(self):
+        for r in self:
+            if r.egyptian and r.phone_number:
+                if len(r.phone_number) not in [10,11]:
+                    raise ValidationError(_("This Phone Number Is not Valid %s",r.phone_number))
+
+                elif not (r.phone_number.starts_with('0')):
+                    raise ValidationError(_("This Phone Number should start with (0) %s",r.phone_number))
 
 
 
