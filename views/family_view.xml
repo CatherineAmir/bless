@@ -59,6 +59,8 @@
                                     <field name="egyptian" widget="toggle_button"/>
                                     <field name="national_id"/>
                                     <field name="date_birth" attrs="{'readonly':[('egyptian','=',True)]}"/>
+                                    <field name="dead"/>
+
                                     <field name="phone_number"/>
                                     <field name="email" optional="hide"/>
 

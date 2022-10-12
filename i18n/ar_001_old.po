@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 12:03+0000\n"
-"PO-Revision-Date: 2022-10-12 12:03+0000\n"
+"POT-Creation-Date: 2022-10-12 12:21+0000\n"
+"PO-Revision-Date: 2022-10-12 12:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -108,7 +108,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:bless.all_givings_act_window
 #: model:ir.ui.menu,name:bless.all_givings_submenu
 msgid "All Givings"
-msgstr "كل "
+msgstr "كل العطايا "
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__am
@@ -192,6 +192,11 @@ msgid "Close"
 msgstr "اغلق"
 
 #. module: bless
+#: model:ir.actions.server,name:bless.action_multi_close
+msgid "Close Givings"
+msgstr "غلق البركات"
+
+#. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__state__closed
 msgid "Closed"
 msgstr "اغلق"
@@ -200,7 +205,7 @@ msgstr "اغلق"
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__coupon_category__clothes
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__coupon_category__clothes
 msgid "Clothes"
-msgstr "الملابس"
+msgstr " كوبون صرف ملابس العيد"
 
 #. module: bless
 #: model:ir.actions.act_window,name:bless.concrete_act_window
@@ -912,6 +917,11 @@ msgstr "المناسبات"
 #: model:ir.model.fields.selection,name:bless.selection__bless_family__family_category__onetime_service
 msgid "Onetime Service"
 msgstr "خدمة مرة واحدة"
+
+#. module: bless
+#: model:ir.actions.server,name:bless.action_multi_open
+msgid "Open Givings"
+msgstr "فتح البركات"
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__state__opened

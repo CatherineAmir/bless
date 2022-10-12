@@ -25,6 +25,7 @@ class Family(models.Model):
     boys_member_count=fields.Integer(compute='_compute_family_count',store=1)
     husband_name=fields.Char(compute='_compute_husband_name',store=1,string='Husband Name')
 
+
     # address_fields
     district=fields.Many2one('bless.regions',string='District',tracking=1)
     nearby = fields.Char(string='Nearby',tracking=1)
@@ -66,9 +67,9 @@ class Family(models.Model):
     @api.depends('member_ids')
     def _compute_family_count(self):
         for r in self:
-            r.family_member_count=len(r.member_ids)
-            r.girls_member_count=len(r.member_ids.filtered(lambda x: x.role_in_family=='daughter'))
-            r.boys_member_count=len(r.member_ids.filtered(lambda x: x.role_in_family=='daughter'))
+            r.family_member_count=len(r.member_ids.filtered(lambda x:x.dead==False))
+            r.girls_member_count=len(r.member_ids.filtered(lambda x: x.role_in_family=='daughter' and x.dead==False))
+            r.boys_member_count=len(r.member_ids.filtered(lambda x: x.role_in_family=='son' and x.dead==False))
 
 
 
@@ -88,7 +89,8 @@ class Member(models.Model):
     national_id=fields.Char()
     date_birth=fields.Date(compute='_compute_date_birth',store=1,readonly=False)
     phone_number=fields.Char(string='Phone Number')
-    family_id=fields.Many2one('bless.family',auto_join=1)
+    dead = fields.Boolean(default=False, string='Dead',tracking=1)
+    family_id=fields.Many2one('bless.family',auto_join=1,tracking=1)
     family_category=fields.Selection(related='family_id.family_category',store=1)
 
     email=fields.Char()

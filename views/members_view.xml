@@ -39,6 +39,7 @@
                     <field name="date_birth"/>
                     <field name="phone_number"/>
                     <field name="family_id"/>
+                    <field name="dead" optional="hide"/>
                     <field name="email" optional="hide"/>
 
                 </tree>
