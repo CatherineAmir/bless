@@ -1,6 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_family,access_family,model_bless_family,,1,1,1,1
-access_family_members,access_family_members,model_bless_member,,1,1,1,1
+access_family,access_family,model_bless_family,,1,1,1,0
+access_family_members,access_family_members,model_bless_member,,1,1,1,0
 
 access_regions,access_regions,model_bless_regions,,1,1,1,1
 access_servants,access_servants,model_bless_servants,,1,1,1,1
@@ -9,7 +9,7 @@ access_units,access_units,model_bless_units,,1,1,1,1
 access_beverage,access_beverage,model_bless_beverage,,1,1,1,1
 access_concrete,access_concrete,model_bless_concrete,,1,1,1,1
 
-access_periodic_giving,access_periodic_giving,model_bless_giving,,1,1,1,1
+access_periodic_giving,access_periodic_giving,model_bless_giving,,1,1,1,0
 access_periodic_giving_line,access_periodic_giving_line,model_bless_giving_line,,1,1,1,1
 access_create_giving_wizard,access_create_giving_wizard,model_bless_create_givings,,1,1,1,1
 access_create_giving_line,access_create_giving_line,model_bless_create_givings_lines,,1,1,1,1

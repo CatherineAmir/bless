@@ -118,5 +118,19 @@
         <menuitem name="Members refugees service" id="members_refugees_service_menu" parent="members_menu" sequence="4" action="members_refugees_service_act_window"/>
         <menuitem name="Members onetime service" id="members_onetime_service_menu" parent="members_menu" sequence="5" action="members_one_time_service_act_window"/>
 
+        <record model="ir.cron" id="cron_change_age">
+    <field name="name">Age Recompute</field>
+    <field name="model_id" ref="bless.model_bless_member"/>
+    <field name ="type">ir.actions.server</field>
+    <field name="state">code</field>
+    <field name="active" eval="True" />
+    <field name="code">model.compute_age()</field>
+    <field name="user_id" ref="base.user_root"/>
+    <field name="interval_number">1</field> <!-- To decide clearly -->
+    <field name="interval_type">days</field>
+    <field name="numbercall">-1</field>
+  </record>
+
+
     </data>
 </odoo>

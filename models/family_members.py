@@ -10,12 +10,12 @@ class Family(models.Model):
     _rec_name='family_code'
     _order='family_code'
 
-    family_code = fields.Char('Family Code',required=1,tracking=1)
+    family_code = fields.Char('Family Code',required=0,tracking=1)
     family_category = fields.Selection([('inside_service','Inside Service'),
                                       ('outside_service','Outside Service'),
                                       ('hidden_family','Hidden Family'),
                                       ('refugees','Refugees'),
-                                      ('onetime_service','Onetime Service')],required=1,tracking=1)
+                                      ('onetime_service','Onetime Service')],required=0,tracking=1)
 
     responsible_servant=fields.Many2one('bless.servants',string='Responsible Servant',tracking=1)
 
@@ -94,7 +94,6 @@ class Member(models.Model):
     family_category=fields.Selection(related='family_id.family_category',store=1)
     age=fields.Integer(compute='_compute_age',store=1,readonly=False)
     fr_of_confession=fields.Char(string='Fr of Confession')
-
     email=fields.Char()
     _sql_constraints = [
         ('unique_national_id',
@@ -105,11 +104,15 @@ class Member(models.Model):
     @api.depends('date_birth','national_id')
     def _compute_age(self):
         for r in self:
-            if r.date_birth:
+            if r.date_birth or r.national_id:
                 today = date.today()
                 age = today.year - r.date_birth.year - ((today.month, today.day) < (r.date_birth.month, r.date_birth.day))
                 r.age=age
 
+    def compute_age(self):
+        members=self.env['bless.member'].sudo().search([])
+        for mem in members:
+            mem._compute_age()
 
     @api.depends('national_id')
     def _compute_date_birth(self):
@@ -124,21 +127,15 @@ class Member(models.Model):
                     year = 'invalid'
                     raise ValidationError(_("This egyptian National ID Is not Valid"))
 
-
-
                 month = id[3:5]
-
                 day = id[5:7]
-
                 try:
                     bithdate = date(int(year), int(month), int(day))
-
                     r.date_birth=bithdate
                 except Exception as e:
                     raise ValidationError(_("This egyptian National ID Is not Valid %s",e))
             if not r.national_id:
                 r.date_birth=False
-
 
 
 
