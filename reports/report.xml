@@ -11,20 +11,27 @@
             <field name="print_report_name">'Givings - %s' % (object.name)</field>
             <field name="binding_model_id" ref="bless.model_bless_giving"/>
             <field name="binding_type">report</field>
+<!--            <field name="orientation">Landscape</field>-->
         </record>
 
         <template id="report_givings_template">
-            <div style="width: 45%; display: inline-table; height:14rem;">
-                <table class="table table-bordered mb-0" style="border: 2px solid black;width:100%;">
+            <div style="width: 30%; display: inline-table; height:10rem;text-align:center;" >
+                <table class="table table-bordered mb-0" style="order: 2px solid black;width:100%;" >
                     <tr>
                         <th class="table-active text-left float-left" style="height: 8rem; width:100%;">
-                             <img src="/bless/static/src/img/oct_dioseces.png" style="max-height: 70px;" alt="Logo" class="img-thumbnail rounded float-right"/>
+                             <img src="/bless/static/src/img/oct_dioseces.png" style="max-height: 40px;" alt="Logo" class="img-thumbnail rounded float-right"/>
 
                             <strong class="table-active text-left float-left">أسرة الحياة الأفضل</strong>
                             <br/>
                             <br/>
                             <t t-if="give.coupon_category">
-                                    <strong t-field="give.coupon_category"/>
+                                <t t-if="give.coupon_category=='food'">
+                                    <strong><span>كوبون صرف مواد غذائية</span></strong>
+                                </t>
+                                <t t-else="">
+                                     <strong><span>كوبون صرف ملابس العيد</span></strong>
+                                </t>
+
                             </t>
 
 
@@ -38,28 +45,42 @@
                             <strong>اسم رب الاسرة :</strong>
                             <strong t-field="give.family_husband"/>
                             <br/>
-                            <br/>
+
                             <strong> كود الاسرة :</strong>
                             <strong t-field="give.family_id.family_code"/>
                             <br/>
-                            <br/>
+
                              <strong>عدد افراد الاسرة:</strong>
                             <strong t-field="give.people_count"/>
+                            <br/>
+                            <strong>قيمة الكوبون:</strong>
+                            <strong t-field="give.cost"/>
+                            <br/>
+                            <t t-if="give.only_cost">
+
+                            <strong>فقط و قدره:</strong>
+                            <strong t-field="give.only_cost"/>
+                             </t>
                         </td>
                     </tr>
                     <tr>
+
                         <td style="height: 2rem;  text-align:right; width:20%;">
                         <strong> تاريخ الصرف:</strong>
                             <strong t-field="give.giving_date"></strong>
                             <br/>
-                            <strong>من الساعة:</strong>
+                            <t t-if="give.from_receipt_time">
+
+
+                            <strong>من:</strong>
                             <strong t-field="give.from_receipt_time" t-options='{"widget": "float_time"}'></strong>
                             <strong t-field="give.from_period"></strong>
-                            <br/>
-
-                            <strong>إلى الساعة:</strong>
+                            </t>
+                            <t t-if="give.to_receipt_time">
+                            <strong>إلى:</strong>
                             <strong t-field="give.to_receipt_time" t-options='{"widget": "float_time"}'></strong>
                             <strong t-field="give.to_period"></strong>
+                            </t>
 
 
 
@@ -69,6 +90,8 @@
 
 
                 </table>
+                <br/>
+                <br/>
             </div>
         </template>
 
@@ -78,7 +101,10 @@
                     <t t-foreach="docs" t-as="give">
                         <t t-call="bless.report_givings_template">
                             <t t-set="give" t-value="give"/>
+
                         </t>
+                        <![CDATA[&nbsp;]]> <![CDATA[&nbsp;]]> <![CDATA[&nbsp;]]><![CDATA[&nbsp;]]>
+
                     </t>
                 </div>
             </t>

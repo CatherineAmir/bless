@@ -24,7 +24,7 @@ msgstr "بركات عينية"
 #. module: bless
 #: model:ir.actions.report,print_report_name:bless.report_giving_label
 msgid "'Givings - %s' % (object.name)"
-msgstr "البركات"
+msgstr "البركات - %s' % (object.name)"
 
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.report_givings_template
@@ -114,7 +114,7 @@ msgstr "السن"
 #: model:ir.actions.act_window,name:bless.all_givings_act_window
 #: model:ir.ui.menu,name:bless.all_givings_submenu
 msgid "All Givings"
-msgstr "الإعانات
+msgstr " كل الإعانات"
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__am
@@ -224,7 +224,7 @@ msgstr "عينية"
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__concrete_id
 #: model:ir.model.fields,field_description:bless.field_bless_giving_line__concrete_id
 msgid "Concrete Giving"
-msgstr "عطايا عينية"
+msgstr "إعانة عينية"
 
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
@@ -267,7 +267,7 @@ msgstr  "الكوبونات"
 #. module: bless
 #: model:ir.model,name:bless.model_bless_create_givings_lines
 msgid "Create  Givings Lines"
-msgstr "انشاء عطايا"
+msgstr "انشاء إعانات"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_giving__create_by
@@ -282,17 +282,17 @@ msgstr "أُنشأ في"
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
 msgid "Create Givings"
-msgstr "انشاء عطايا"
+msgstr "انشاء إعانات"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.create_all_givings_submenu
 msgid "Create Many Givings"
-msgstr "انشاء عطايا"
+msgstr "انشاء إعانات"
 
 #. module: bless
 #: model:ir.actions.act_window,name:bless.create_wizard_act_window
 msgid "Create givings"
-msgstr "انشاء عطايا"
+msgstr "انشاء إعانات"
 
 #. module: bless
 #: model:ir.model,name:bless.model_bless_create_givings
