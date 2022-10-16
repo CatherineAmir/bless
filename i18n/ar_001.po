@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-12 13:50+0000\n"
-"PO-Revision-Date: 2022-10-12 13:50+0000\n"
+"POT-Creation-Date: 2022-10-16 09:50+0000\n"
+"PO-Revision-Date: 2022-10-16 09:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings_lines__giving_type__concrete_giving
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving_line__giving_type__concrete_giving
 msgid " Concrete Giving"
 msgstr "بركات عينية"
@@ -105,10 +106,15 @@ msgid "Activity Type Icon"
 msgstr ""
 
 #. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__age
+msgid "Age"
+msgstr "السن"
+
+#. module: bless
 #: model:ir.actions.act_window,name:bless.all_givings_act_window
 #: model:ir.ui.menu,name:bless.all_givings_submenu
 msgid "All Givings"
-msgstr "كل "
+msgstr "الإعانات
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__from_period__am
@@ -224,7 +230,7 @@ msgstr "عطايا عينية"
 #: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
 #: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
 msgid "Concrete Giving Details"
-msgstr "تفاصيل البركات العينية"
+msgstr "تفاصيل الاعانة العينية"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.bless_configurations
@@ -251,12 +257,12 @@ msgstr "الكوبونات"
 #. module: bless
 #: model:ir.actions.act_window,name:bless.coupons_giving_act_window
 msgid "Coupons Giving"
-msgstr "عطايا الكوبونات"
+msgstr  "الكوبونات"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.coupons_givings
 msgid "Coupons Givings"
-msgstr "عطايا الكوبونات"
+msgstr  "الكوبونات"
 
 #. module: bless
 #: model:ir.model,name:bless.model_bless_create_givings_lines
@@ -276,17 +282,17 @@ msgstr "أُنشأ في"
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.create_wizard_wizard_view
 msgid "Create Givings"
-msgstr "أنشاء عطايا"
+msgstr "انشاء عطايا"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.create_all_givings_submenu
 msgid "Create Many Givings"
-msgstr "أنشاء عطايا"
+msgstr "انشاء عطايا"
 
 #. module: bless
 #: model:ir.actions.act_window,name:bless.create_wizard_act_window
 msgid "Create givings"
-msgstr "أنشاء عطايا"
+msgstr "انشاء عطايا"
 
 #. module: bless
 #: model:ir.model,name:bless.model_bless_create_givings
@@ -327,12 +333,12 @@ msgstr "اُنشأ بواسطة"
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_member__date_birth
 msgid "Date Birth"
-msgstr "تاريخ الميلا"
+msgstr "تاريخ الميلاد"
 
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__daughter
 msgid "Daughter"
-msgstr "ابنة"
+msgstr "الابنة"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_member__dead
@@ -458,7 +464,7 @@ msgstr "أفراد الاسرة"
 #. module: bless
 #: model:ir.actions.act_window,name:bless.family_out_service_action
 msgid "Family out Service"
-msgstr "أسرة خارج الخدم"
+msgstr "أسرة خارج الخدمة"
 
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.members_search_view
@@ -502,6 +508,7 @@ msgid "Food And Beverage"
 msgstr "منتجات غذائية"
 
 #. module: bless
+#: model:ir.model.fields.selection,name:bless.selection__bless_create_givings_lines__giving_type__food_beverage
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving_line__giving_type__food_beverage
 msgid "Food Beverage"
 msgstr "منتجات غذائية"
@@ -517,6 +524,11 @@ msgstr "منتجات غذائية"
 #: model_terms:ir.ui.view,arch_db:bless.beverage_tree_view
 msgid "Food and Beverage"
 msgstr "منتجات غذائية"
+
+#. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_member__fr_of_confession
+msgid "Fr of Confession"
+msgstr "أب الاعتراف"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_giving__from_receipt_time
@@ -576,6 +588,7 @@ msgstr "تفاصيل بركة الطعام"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__giving_category
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings_lines__giving_type
 #: model:ir.model.fields,field_description:bless.field_bless_giving__giving_category
 #: model:ir.model.fields,field_description:bless.field_bless_giving_line__giving_type
 #: model_terms:ir.ui.view,arch_db:bless.giving_search_view
@@ -617,12 +630,12 @@ msgstr "مجمع ب"
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__giving_category__hand_giving
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__giving_category__hand_giving
 msgid "Hand Giving"
-msgstr "بركات في اليد"
+msgstr "إعانة عينية"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.hand_givings
 msgid "Hand Givings"
-msgstr "بركات في اليد"
+msgstr "إعانة عينية"
 
 #. module: bless
 #: model:ir.actions.act_window,name:bless.family_hidden_service_action
@@ -821,12 +834,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:bless.selection__bless_create_givings__giving_category__money_giving
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__giving_category__money_giving
 msgid "Money Giving"
-msgstr "البركات المادية"
+msgstr "إعانة مالية"
 
 #. module: bless
 #: model:ir.ui.menu,name:bless.money_givings
 msgid "Money Givings"
-msgstr "البركات المادية"
+msgstr "إعانة مالية"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_family__my_activity_date_deadline
@@ -924,6 +937,12 @@ msgid "Onetime Service"
 msgstr "خدمة مرة واحدة"
 
 #. module: bless
+#: model:ir.model.fields,field_description:bless.field_bless_create_givings__only_cost
+#: model:ir.model.fields,field_description:bless.field_bless_giving__only_cost
+msgid "Only Cost"
+msgstr "فقط و قدره"
+
+#. module: bless
 #: model:ir.actions.server,name:bless.action_multi_open
 msgid "Open Givings"
 msgstr "فتح البركات"
@@ -954,7 +973,7 @@ msgstr "مساءا"
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
 msgid "Periodic Giving"
-msgstr "العطايا المنتظمة"
+msgstr "الإعانات المنتظمة"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_member__phone_number

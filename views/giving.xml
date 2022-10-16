@@ -26,7 +26,8 @@
                                 <field name="giving_date"/>
                                 <field name="giving_category"/>
                                 <field name="occasion_id"/>
-                                <field name="cost"/>
+                                <field name="cost"  attrs="{'readonly':[('state','=','closed')]}"/>
+                                <field name="only_cost"/>
                                 <field name="create_date"/>
                                 <field name="create_by"/>
                             </group>
@@ -40,31 +41,35 @@
                         </group>
                             <group string="Coupon Data" attrs="{'invisible':[('giving_category','!=','coupons')]}">
                                 <group>
-                                    <field name="coupon_category" required="1" widget="selection_badge"/>
+                                    <field name="coupon_category"  attrs="{'required':[('giving_category','=','coupons')]}" widget="selection_badge"/>
                                 </group>
                             <group>
                                      <div class="d-flex" style="text-align:center;">
                                          <label for="from_receipt_time"/>
-                                            <strong><field name="from_receipt_time" widget="float_time" required="1"/></strong>
+                                            <strong><field name="from_receipt_time" widget="float_time"/></strong>
 
-                                            <field name="from_period" widget="selection_badge" required="1"/>
+                                            <field name="from_period" widget="selection_badge"/>
                                     </div>
                                     <div class="d-flex" style="text-align:center;">
                                          <h2><label for="to_receipt_time"/></h2>
-                                        <strong><field name="to_receipt_time" widget="float_time" required="1"/></strong>
+                                        <strong><field name="to_receipt_time" widget="float_time" /></strong>
 
-                                            <field name="to_period" widget="selection_badge" required="1"/>
+                                            <field name="to_period" widget="selection_badge" />
                                     </div>
                             </group>
 
 
                             </group>
 
-                        <notebook attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
-                            <page string="Food Giving Details" name="Giving Name">
-                                <field name="giving_lines_food" context="{'default_giving_type':'food_beverage'}" domain="[('giving_type','=','food_beverage')]">
+                        <notebook>
+
+
+                            <page string="Food Giving Details" name="Giving Name" attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
+                                <field name="giving_category" invisible="1"/>
+                                <field name="giving_lines_food" context="{'default_giving_type':'food_beverage'}" force_save="1">
                                     <tree editable="bottom">
-                                       <field name="giving_type" readonly="1"/>
+                                        <field name="giving_type" invisible="1"/>
+
                                         <field name="beverage_id" required="1"/>
                                         <field name="unit_id"/>
                                         <field name="quantity" required="1"/>
@@ -73,14 +78,14 @@
                                 </field>
 
                             </page>
-                            <page string="Concrete Giving Details" name="Giving Name">
-                                <field name="giving_lines_concrete" context="{'default_giving_type':'concrete_giving'}" domain="[('giving_type','=','concrete_giving')]">
+                            <page string="Concrete Giving Details" name="Giving Name" attrs="{'invisible':[('giving_category','!=','hand_giving')]}">
+                                <field name="giving_lines_concrete" context="{'default_giving_type':'concrete_giving'}">
                                     <tree editable="bottom">
-                                       <field name="giving_type" readonly="1"/>
+                                       <field name="giving_type" invisible="1"/>
 
                                         <field name="concrete_id" required="1"/>
                                         <field name="quantity" required="1"/>
-                                        <field name="cost"/>
+                                        <field name="cost" />
 
                                     </tree>
                                 </field>
@@ -112,7 +117,9 @@
                     <field name="family_husband"/>
                     <field name="family_category"/>
                     <field name="people_count"/>
-                    <field name="cost" optional="hide"/>
+                    <field name="cost" />
+                    <field name="only_cost" optional="show" />
+
                     <field name="state"/>
                     <field name="create_by"/>
                     <field name="create_date"/>

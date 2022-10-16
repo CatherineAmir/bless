@@ -92,6 +92,8 @@ class Member(models.Model):
     dead = fields.Boolean(default=False, string='Dead',tracking=1)
     family_id=fields.Many2one('bless.family',auto_join=1,tracking=1)
     family_category=fields.Selection(related='family_id.family_category',store=1)
+    age=fields.Integer(compute='_compute_age',store=1,readonly=False)
+    fr_of_confession=fields.Char(string='Fr of Confession')
 
     email=fields.Char()
     _sql_constraints = [
@@ -100,7 +102,13 @@ class Member(models.Model):
          'national_id must be unique'),
 
     ]
-
+    @api.depends('date_birth','national_id')
+    def _compute_age(self):
+        for r in self:
+            if r.date_birth:
+                today = date.today()
+                age = today.year - r.date_birth.year - ((today.month, today.day) < (r.date_birth.month, r.date_birth.day))
+                r.age=age
 
 
     @api.depends('national_id')
@@ -148,7 +156,7 @@ class Member(models.Model):
                 if len(r.phone_number) not in [10,11]:
                     raise ValidationError(_("This Phone Number Is not Valid %s",r.phone_number))
 
-                elif not (r.phone_number.starts_with('0')):
+                elif not (r.phone_number.startswith('0')):
                     raise ValidationError(_("This Phone Number should start with (0) %s",r.phone_number))
 
 

@@ -11,19 +11,21 @@ class Giving(models.Model):
     state= fields.Selection([
         ('opened', 'Opened'),
         ('closed', 'Closed')], default='opened',copy=False, tracking=True,required=1)
-    giving_date=fields.Date(required=1,string='Giving date',tracking=1,readonly=True,state={'opened':[('readonly', False)]})
+    giving_date=fields.Date(required=1,string='Giving date',tracking=1,readonly=True,states={'opened':[('readonly', False)]})
 
     family_id=fields.Many2one('bless.family',string='Family Code',tracking=1,readonly=True,
-                              state={'opened':[('readonly', False)]})
+                              states={'opened':[('readonly', False)]})
     family_husband=fields.Char(related='family_id.husband_name',store=1,string='Husband name')
     family_category=fields.Selection(related='family_id.family_category',store=1)
     people_count=fields.Integer(related='family_id.family_member_count',store=1,string='family member count')
     occasion_id=fields.Many2one('bless.occasions',required=1,string='Occasion',tracking=1,
-       readonly=True,state={'opened': [('readonly', False)]})
-    cost=fields.Float(compute='compute_giving_cost',store=1,readonly=True,string='cost',state={'opened': [('readonly', False)]})
+       readonly=True,states={'opened': [('readonly', False)]})
+    cost=fields.Float(compute='compute_giving_cost',store=1,readonly=False,string='cost',state={'closed': [('readonly', True)]},tracking=1)
+    only_cost=fields.Char('Only Cost',readonly=True,states={'opened':[('readonly', False)]},tracking=1)
+
     giving_category=fields.Selection([('hand_giving','Hand Giving'),
                                    ('coupons','Coupons'),
-                                      ('money_giving','Money Giving')],required=1,string='Giving Type',readonly=True,)
+                                      ('money_giving','Money Giving')],required=1,string='Giving Type',readonly=True,tracking=1)
 
 
     coupon_category=fields.Selection([('food','Food'),
@@ -76,7 +78,7 @@ class GivingLine(models.Model):
     # name=fields.Char()
     giving_id = fields.Many2one('bless.giving',required=1,auto_join=1)
     giving_category = fields.Selection(related='giving_id.giving_category',store=1,string='Giving category')
-    giving_type = fields.Selection([('food_beverage','Food Beverage'),('concrete_giving',' Concrete Giving')],required=1)
+    giving_type = fields.Selection([('food_beverage','Food Beverage'),('concrete_giving',' Concrete Giving')])
     beverage_id = fields.Many2one('bless.beverage',string="Food And Beverage")
     unit_id = fields.Many2one(related='beverage_id.unit_id',store=1,readonly=False)
     concrete_id = fields.Many2one('bless.concrete',store=1,string="Concrete Giving")

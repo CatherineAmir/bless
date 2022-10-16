@@ -37,8 +37,10 @@
                     <field name="egyptian"/>
                     <field name="national_id"/>
                     <field name="date_birth"/>
+                    <field name="age"/>
                     <field name="phone_number"/>
                     <field name="family_id"/>
+                    <field name="fr_of_confession"/>
                     <field name="dead" optional="hide"/>
                     <field name="email" optional="hide"/>
 
@@ -54,6 +56,7 @@
                     <group expand="1" string="Group By">
                         <field name="national_id"/>
                         <field name="phone_number"/>
+                        <field name="age"/>
 
                         <filter string="Family Category" name="group_family_category" domain="[]"
                                 context="{'group_by':'family_category'}"/>
@@ -64,9 +67,7 @@
                         <filter name="wife" string="Female" domain="[('role_in_family','in',['wife','daughter'])]"/>
                         <filter string="Birth date" name="date" date="date_birth"/>
 
-
                     </group>
-
 
                 </search>
             </field>

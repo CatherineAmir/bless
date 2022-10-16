@@ -58,7 +58,9 @@
                                     <field name="role_in_family"/>
                                     <field name="egyptian" widget="toggle_button"/>
                                     <field name="national_id"/>
+                                    <field name="age"/>
                                     <field name="date_birth" attrs="{'readonly':[('egyptian','=',True)]}"/>
+                                    <field name="fr_of_confession"/>
                                     <field name="dead"/>
 
                                     <field name="phone_number"/>

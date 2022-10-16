@@ -12,6 +12,7 @@ class CreateGiving(models.TransientModel):
                                         ('coupons', 'coupons'),
                                         ('money_giving', 'Money Giving')], required=1, string='Giving Type')
     cost = fields.Float(string='cost',compute='compute_cost',store=1,readonly=False)
+    only_cost = fields.Char('Only Cost')
     giving_lines_food = fields.Many2many('bless.create.givings.lines','lines_food', 'src_id', 'dest_id',
                                          auto_join=1)
 
@@ -50,15 +51,16 @@ class CreateGiving(models.TransientModel):
                 'from_period':self.from_period,
                 'to_receipt_time':self.to_receipt_time,
                 'to_period':self.to_period,
+                'only_cost':self.only_cost,
 
 
             }
                 givings.append(one_giving)
             created_givings = self.env['bless.giving'].create(givings)
-            print('givings', created_givings)
+
         else:
             food_lines=[]
-            print('self.giving_lines_food',self.giving_lines_food)
+
 
             for line in self.giving_lines_food:
                 food_line={
@@ -67,6 +69,7 @@ class CreateGiving(models.TransientModel):
                 'quantity':line.quantity,
                 'unit_id':line.unit_id.id,
                 'cost':line.cost,
+
                 }
 
                 food_lines.append(food_line)
@@ -91,11 +94,12 @@ class CreateGiving(models.TransientModel):
                     'occasion_id': self.occasion_id.id,
                     'giving_lines_food':[(0,0,food) for food in food_lines],
                     'giving_lines_concrete':[(0,0,concrete) for concrete in concrete_lines],
+                    'only_cost':self.only_cost,
 
                 }
                 givings.append(one_giving)
             created_givings = self.env['bless.giving'].create(givings)
-            print('givings_handed', created_givings)
+
 
 
 
@@ -116,10 +120,10 @@ class CreateGivingLines(models.TransientModel):
 
     giving_id = fields.Many2many('bless.create.givings', auto_join=1,ondelete='cascade')
     giving_category = fields.Selection(related='giving_id.giving_category', store=1, string='Giving category')
-    # giving_type = fields.Selection([('food_beverage', 'Food Beverage'), ('concrete_giving', ' Concrete Giving')])
+    giving_type = fields.Selection([('food_beverage', 'Food Beverage'), ('concrete_giving', ' Concrete Giving')])
     beverage_id = fields.Many2one('bless.beverage', string="Food And Beverage")
     unit_id = fields.Many2one(related='beverage_id.unit_id', store=1, readonly=False)
     concrete_id = fields.Many2one('bless.concrete', store=1, string="Concrete Giving")
-    cost = fields.Float(compute='_compute_cost', store=1, readonly=False, string='cost')
+    cost = fields.Float(compute='_compute_cost', store=1, readonly=False, string='cost',tracking=1)
     quantity = fields.Float('Quantity', default=1)
 
