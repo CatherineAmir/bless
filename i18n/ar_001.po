@@ -24,7 +24,7 @@ msgstr "بركات عينية"
 #. module: bless
 #: model:ir.actions.report,print_report_name:bless.report_giving_label
 msgid "'Givings - %s' % (object.name)"
-msgstr "البركات - %s' % (object.name)"
+msgstr "'البركات - %s' % (object.name)"
 
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.report_givings_template
@@ -338,7 +338,7 @@ msgstr "تاريخ الميلاد"
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__daughter
 msgid "Daughter"
-msgstr "الابنة"
+msgstr "ابنة"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_member__dead
@@ -533,13 +533,13 @@ msgstr "أب الاعتراف"
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_giving__from_receipt_time
 msgid "From"
-msgstr "من"
+msgstr " من الساعة"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__from_period
 #: model:ir.model.fields,field_description:bless.field_bless_giving__from_period
 msgid "From Period"
-msgstr "صباحا/مساءا"
+msgstr " صباحا /مساءا"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__from_receipt_time
@@ -968,7 +968,7 @@ msgstr "خارج الخدمة"
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__from_period__pm
 #: model:ir.model.fields.selection,name:bless.selection__bless_giving__to_period__pm
 msgid "PM"
-msgstr "مساءا"
+msgstr " مساءا"
 
 #. module: bless
 #: model_terms:ir.ui.view,arch_db:bless.periodic_giving_form_view
@@ -1047,7 +1047,7 @@ msgstr "الخدام"
 #. module: bless
 #: model:ir.model.fields.selection,name:bless.selection__bless_member__role_in_family__son
 msgid "Son"
-msgstr "الابن"
+msgstr "ابن"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_giving__state
@@ -1097,18 +1097,18 @@ msgstr "العنوان"
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_giving__to_receipt_time
 msgid "To"
-msgstr "إلى"
+msgstr " إلى الساعة"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__to_period
 #: model:ir.model.fields,field_description:bless.field_bless_giving__to_period
 msgid "To Period"
-msgstr "صباحا /مساء"
+msgstr " صباحا /مساء"
 
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__to_receipt_time
 msgid "To Receipt Time"
-msgstr "إلى"
+msgstr "إلى الساعة"
 
 #. module: bless
 #: model:ir.model.fields,help:bless.field_bless_family__activity_exception_decoration

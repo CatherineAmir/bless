@@ -25,20 +25,25 @@
 
                            <group string="Coupon Data" attrs="{'invisible':[('giving_category','!=','coupons')]}">
                                 <group>
-                                    <field name="coupon_category" required="1" widget="selection_badge"/>
+                                    <field name="coupon_category"  widget="selection_badge" attrs="{'required':[('giving_category','=','coupons')]}"/>
                                 </group>
                             <group>
-                                     <div class="d-flex" style="text-align:center;">
-                                         <label for="from_receipt_time"/>
-                                            <strong><field name="from_receipt_time" widget="float_time"/></strong>
 
-                                            <field name="from_period" widget="selection_badge"/>
-                                    </div>
                                     <div class="d-flex" style="text-align:center;">
-                                         <h2><label for="to_receipt_time"/></h2>
+                                          <field name="to_period" widget="selection_badge"/>
                                         <strong><field name="to_receipt_time" widget="float_time"/></strong>
 
-                                            <field name="to_period" widget="selection_badge"/>
+
+                                        <h2><label for="to_receipt_time"/></h2>
+                                    </div>
+
+                                <div class="d-flex" style="text-align:center;">
+                                     <field name="from_period" widget="selection_badge"/>
+                                            <strong><field name="from_receipt_time" widget="float_time"/></strong>
+                                     <label for="from_receipt_time"/>
+
+
+
                                     </div>
                             </group>
 
