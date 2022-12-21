@@ -1108,7 +1108,7 @@ msgstr " صباحا /مساء"
 #. module: bless
 #: model:ir.model.fields,field_description:bless.field_bless_create_givings__to_receipt_time
 msgid "To Receipt Time"
-msgstr "إلى الساعة"
+msgstr " إلى الساعة "
 
 #. module: bless
 #: model:ir.model.fields,help:bless.field_bless_family__activity_exception_decoration
