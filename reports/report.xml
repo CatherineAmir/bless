@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-
+<!--TODO change Logo of the service and add application autobackup and audit log-->
         <record id="report_giving_label" model="ir.actions.report">
             <field name="name">Giving Coupons (PDF)</field>
             <field name="model">bless.giving</field>
