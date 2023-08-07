@@ -31,8 +31,7 @@ class Family(models.Model):
     apartment_number = fields.Char( string='Apartment Number')
     givings_ids = fields.One2many('bless.giving','family_id',string='Givings',tracking=1)
     givings_count=fields.Integer(compute='compute_givings_count',store=1,tracking=1)
-
-    internal_notes=fields.Text("nternal Notes")
+    internal_notes=fields.Text("Internal Notes")
 
     def name_get(self):
         result = []
