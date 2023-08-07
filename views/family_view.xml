@@ -41,6 +41,7 @@
                         <group>
                             <field name="family_category"/>
                             <field name="responsible_servant"/>
+                            <field name="internal_notes"/>
 
                         </group>
                         <group>
@@ -110,6 +111,7 @@
                     <field name="nearby" optional="hide"/>
                     <field name="building_number" optional="hide"/>
                     <field name="apartment_number" optional="hide"/>
+                    <field name="internal_notes" optional="hide"/>
 
                 </tree>
             </field>

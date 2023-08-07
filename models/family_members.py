@@ -24,8 +24,6 @@ class Family(models.Model):
     girls_member_count=fields.Integer(compute='_compute_family_count',store=1)
     boys_member_count=fields.Integer(compute='_compute_family_count',store=1)
     husband_name=fields.Char(compute='_compute_husband_name',store=1,string='Husband Name')
-
-
     # address_fields
     district=fields.Many2one('bless.regions',string='District',tracking=1)
     nearby = fields.Char(string='Nearby',tracking=1)
@@ -33,6 +31,8 @@ class Family(models.Model):
     apartment_number = fields.Char( string='Apartment Number')
     givings_ids = fields.One2many('bless.giving','family_id',string='Givings',tracking=1)
     givings_count=fields.Integer(compute='compute_givings_count',store=1,tracking=1)
+
+    internal_notes=fields.Text("nternal Notes")
 
     def name_get(self):
         result = []
