@@ -85,7 +85,7 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">bless.member</field>
             <field name="view_mode">tree,search</field>
-            <field name="domain">[('family_category','=','outside_service')]</field>
+            <field name="domain">[('family_category','in',['outside_service',False])]</field>
 
         </record>
 

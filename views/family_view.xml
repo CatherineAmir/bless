@@ -3,8 +3,8 @@
     <data>
         <record id="action_compute_age" model="ir.actions.server">
             <field name="name">Compute Age</field>
-            <field name="model_id" ref="bless.model_bless.member"/>
-            <field name="binding_model_id" ref="bless.model_bless.member"/>
+            <field name="model_id" ref="bless.model_bless_member"/>
+            <field name="binding_model_id" ref="bless.model_bless_member"/>
             <field name="binding_view_types">list</field>
             <field name="state">code</field>
             <field name="code">action = records.compute_age()</field>

@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_family,access_family,model_bless_family,,1,1,1,1
-access_family_members,access_family_members,model_bless_member,,1,1,1,0
-
+access_family_members,access_family_members,model_bless_member,,1,1,1,1
+,,,,,,,
 access_regions,access_regions,model_bless_regions,,1,1,1,1
 access_servants,access_servants,model_bless_servants,,1,1,1,1
 access_occasions,access_occasions,model_bless_occasions,,1,1,1,1

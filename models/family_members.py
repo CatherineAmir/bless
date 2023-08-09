@@ -89,7 +89,7 @@ class Member(models.Model):
     date_birth=fields.Date(compute='_compute_date_birth',store=1,readonly=False)
     phone_number=fields.Char(string='Phone Number')
     dead = fields.Boolean(default=False, string='Dead',tracking=1)
-    family_id=fields.Many2one('bless.family',auto_join=1,tracking=1)
+    family_id=fields.Many2one('bless.family',auto_join=1,tracking=1,ondelete='cascade')
     family_category=fields.Selection(related='family_id.family_category',store=1)
     age=fields.Integer(compute='_compute_age',store=1,readonly=False)
     fr_of_confession=fields.Char(string='Fr of Confession')
@@ -149,10 +149,10 @@ class Member(models.Model):
     def check_phone_number(self):
         for r in self:
             if r.egyptian and r.phone_number:
-                if len(r.phone_number) not in [10,11]:
-                    raise ValidationError(_("This Phone Number Is not Valid %s",r.phone_number))
+                # if len(r.phone_number) not in [10,11]:
+                #     raise ValidationError(_("This Phone Number Is not Valid %s",r.phone_number))
 
-                elif not (r.phone_number.startswith('0')):
+                if not (r.phone_number.startswith('0') or r.phone_number.startswith("'0")):
                     raise ValidationError(_("This Phone Number should start with (0) %s",r.phone_number))
 
 
